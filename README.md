@@ -6,6 +6,10 @@
 
 -link to screencast: _link
 
+
+
+
+
 # Introduction
 
 A *RESTful architecture*, is an architectural style ([Fielding](https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)) for providing resources to clients using a set of request verbs and resource locations. A REST API allows a client to access resources provided by a service.
