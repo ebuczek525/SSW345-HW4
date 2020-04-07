@@ -2,14 +2,22 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+const { uuid } = require('uuidv4');
+const id = uuid()
+
 // express configuration
 app.use(express.json({type: '*/*'}));
 
 // Set your routes
-app.get('/', (req, res) => res.send('Hello World!'))
-app.post('/', function (req, res) {
+// app.get('/', (req, res) => res.send('Hello World!'))
+
+app.get('/:id', function (req, res) {
+    res.send(req.body)
+});
+
+app.post('/share', function (req, res) {
     
-    res.send(`Received object. ${JSON.stringify(req.body)}`);
+    res.send({success:true, link: `http://localhost:3000/${id}`});
 
 });
 
